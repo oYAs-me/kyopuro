@@ -14,5 +14,17 @@ ll powll(ll x, ll y) {if (y<2) return 1;
 }
 
 int main() {
-
+    string s;
+    cin>>s;
+    int l=s.size();
+    set<string> ans;
+    // setについて調べないといけないかも.
+    string part;
+    rep(i,l){
+        rep2(j, i, l){
+            part=s.substr(i,j-i+1);
+            ans.insert(part);
+        }
+    }
+    cout<<ans.size()<<endl;
 }

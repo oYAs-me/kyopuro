@@ -14,5 +14,16 @@ ll powll(ll x, ll y) {if (y<2) return 1;
 }
 
 int main() {
-
+    int n,k;
+    cin>>n>>k;
+    int a;
+    bool space=false;
+    rep(i,n){
+      cin>>a;
+      if(a%k==0){
+        if (space) cout<<' '<<a/k;
+        else {cout<<a/k;space=true;}
+      }
+    }
+  cout<<endl;
 }
